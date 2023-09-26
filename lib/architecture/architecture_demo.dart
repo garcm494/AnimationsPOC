@@ -79,26 +79,7 @@ class _ArchitectureDemoPageRouteState extends State<ArchitectureDemoPageRoute> w
                       animationController: _animationController,
                       intervalStart: 0.5,
                       intervalEnd: 1.0,
-                      child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              textStyle: const TextStyle(fontSize: 20),
-                              backgroundColor: Colors.blue,
-                              foregroundColor: Colors.white,
-                              elevation: 4.0
-                          ),
-                          onPressed: () {
-                            //TODO: TRIGGER ANIMATION HERE?
-                          },
-                          child: const Text(
-                            "Add to bag - \$20.95",
-                            style: TextStyle(
-                                fontSize: 24,
-                                fontFamily: 'Avenir',
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white
-                            ),
-                          )
-                      ),
+                      child: getChild(),
                     ),
                   )
                 ],
@@ -113,6 +94,29 @@ class _ArchitectureDemoPageRouteState extends State<ArchitectureDemoPageRoute> w
           const SizedBox(height: 40.0,),
         ],
       ),
+    );
+  }
+
+  Widget getChild() {
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 20),
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
+            elevation: 4.0
+        ),
+        onPressed: () {
+          //TODO: TRIGGER ANIMATION HERE?
+        },
+        child: const Text(
+          "Add to bag - \$20.95",
+          style: TextStyle(
+              fontSize: 24,
+              fontFamily: 'Avenir',
+              fontWeight: FontWeight.bold,
+              color: Colors.white
+          ),
+        )
     );
   }
 

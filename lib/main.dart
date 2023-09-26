@@ -1,4 +1,5 @@
 import 'package:animations_sample/architecture/architecture_demo.dart';
+import 'package:animations_sample/booked/booked_card.dart';
 import 'package:animations_sample/complex_animations_route.dart';
 import 'package:animations_sample/plp/plp_main_page_route.dart';
 import 'package:animations_sample/sdui_custom_page_route.dart';
@@ -123,6 +124,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text('Architecture Sample'),
+            ),
+
+            const SizedBox(height: 10,),
+
+            ElevatedButton(
+              style: style,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const BookedDemoPageRoute())
+                );
+              },
+              child: const Text('Booked plan card state change'),
             ),
 
             const SizedBox(height: 10,),
